@@ -69,7 +69,7 @@ if __name__ == "__main__":
                     else:
                         print("name:{},color:{}".format(name,None))
 
-    # 用continue
+    # 用continue name,price对应取值键值对
     for name,price in name_price.items():
         if price >= 1000:
             continue
