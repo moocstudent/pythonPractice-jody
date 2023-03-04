@@ -20,6 +20,8 @@ if __name__ == "__main__":
     l.append(5)
     print(l)
 
+    l = []
+    l.append('hello')
     # 片切操作
     l = [1,2,3,4]
     print(l[1:3])
