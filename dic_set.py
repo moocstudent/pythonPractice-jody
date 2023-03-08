@@ -17,6 +17,7 @@ products = [
 ]
 
 def find_unique_price(products):
+    # 初始化列表
     unique_price_list = []
     for _,price in products:
         if price not in unique_price_list:
@@ -25,6 +26,7 @@ def find_unique_price(products):
 
 # 字典版
 def find_unique_price_set(products):
+    # 初始化字典集
     unique_price_set = set()
     for _,price in products:
         unique_price_set.add(price)

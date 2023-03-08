@@ -29,7 +29,6 @@ if __name__ == "__main__":
 
     # map函数
     l = [1,3,5,6,8]
-    # 我希望我的宝宝能不走我的路，投身高科技产业，为自己和国家，家庭做出巨大贡献
     new_list = list(map(lambda x:x**2,l))
     print(new_list)
 
@@ -39,7 +38,6 @@ if __name__ == "__main__":
     print(list(new_list))
 
     # reduce函数 计算阶乘
-    # 从社会主义角度看，个人发展其实要经历很多的竞争
     from functools import reduce
     product = reduce(lambda x,y:x**y,l)
     print('product', product)
@@ -51,4 +49,12 @@ if __name__ == "__main__":
     print(d.items())
     sort_d = sorted(d.items(),key=operator.itemgetter(1),reverse=True)
     print(sort_d)
+
+    # 根据key排序
+    sorted_asc_by_key = sorted(d.items(),key=lambda x:x[0])
+    print(sorted_asc_by_key)
+
+    # 根据value排序
+    sorted_asc_by_value = sorted(d.items(),key=lambda x:x[1])
+    print(sorted_asc_by_value)
 

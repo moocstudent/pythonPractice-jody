@@ -76,6 +76,9 @@ if __name__ == "__main__":
 
     word_and_freq = parse(text)
 
+    # 第二个参数，如果是 'r' 表示读取，如果是'w' 则表示写入，
+    # 当然也可以用 'rw' ，表示读写都要。a 则是一个不太常用（但也很有用）的参数，
+    # 表示追加（append），这样打开的文件，如果需要写入，会从原始文件的最末尾开始写入。
     with open("out.txt","w") as fout:
         for word, freq in word_and_freq:
             fout.write('{} {}\n'.format(word,freq))
@@ -100,5 +103,9 @@ if __name__ == "__main__":
         word_and_freq = parse_readline(fin)
 
     with open("out_readline.txt","w") as fout:
+        for word, freq in word_and_freq:
+            fout.write('{} {}\n'.format(word,freq))
+
+    with open("out_append_text.txt","a") as fout:
         for word, freq in word_and_freq:
             fout.write('{} {}\n'.format(word,freq))
